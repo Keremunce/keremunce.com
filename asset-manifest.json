@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/keremunce.com/static/css/main.826ea95b.css",
-    "main.js": "/keremunce.com/static/js/main.9d9d082a.js",
+    "main.js": "/keremunce.com/static/js/main.857aa601.js",
     "index.html": "/keremunce.com/index.html",
     "main.826ea95b.css.map": "/keremunce.com/static/css/main.826ea95b.css.map",
-    "main.9d9d082a.js.map": "/keremunce.com/static/js/main.9d9d082a.js.map"
+    "main.857aa601.js.map": "/keremunce.com/static/js/main.857aa601.js.map"
   },
   "entrypoints": [
     "static/css/main.826ea95b.css",
-    "static/js/main.9d9d082a.js"
+    "static/js/main.857aa601.js"
   ]
 }
