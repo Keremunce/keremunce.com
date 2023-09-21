@@ -1,0 +1,99 @@
+.ContactTab-container {
+    padding: 1rem;
+}
+
+.ContactTab-container .contactBox-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ContactTab-container .contactBox {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: .5rem;
+    border-radius: .25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ContactTab-container .contactBox .title {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.ContactTab-container .contactBox .subtitle {
+    color: var(--text-secondary);
+    font-size: .9rem;
+}
+
+.ContactTab-container .contactBox>.icon-container {
+    padding: .5rem;
+    border-radius: .15rem;
+    display: grid;
+    place-content: center;
+}
+
+.ContactTab-container .contactBox>div>i {
+    font-size: 2rem;
+}
+.ContactTab-container .inner-container .form-container form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.ContactTab-container .inner-container .form-container form .input-group {
+    flex: 1;
+}
+
+.ContactTab-container .inner-container .form-container form .input-group.inputName,
+.ContactTab-container .inner-container .form-container form .input-group.inputEmail {
+    flex-basis: calc(50% - 0.5rem);
+    max-width: calc(50% - 0.5rem);
+}
+
+.ContactTab-container .inner-container .form-container form .input-group.inputSubject,
+.ContactTab-container .inner-container .form-container form .input-group.inputMessage {
+    flex-basis: 100%;
+    max-width: 100%;
+}
+
+.ContactTab-container .inner-container .form-container form .input-group input,
+.ContactTab-container .inner-container .form-container form .input-group textarea {
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-radius: .25rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    line-height: 1.6;
+    font-weight: 400;
+    background-image: none;
+    transition: all 0.3s ease-in-out;
+    resize: none;
+}
+.ContactTab-container .inner-container .form-container form .input-group input:focus,
+.ContactTab-container .inner-container .form-container form .input-group textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.15rem rgba(249, 115, 22, .4);
+}
+
+.ContactTab-container .inner-container .form-container form .button-container{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.ContactTab-container .inner-container .form-container form .button-container button{
+    background-color: var(--orange-500);
+    font-weight: 500;
+    padding: 8px 20px;
+    border-radius: .25rem;
+    color: #fff;
+}

@@ -1,0 +1,55 @@
+.PortfolioTab-container  {
+    padding: 1rem;
+}
+.PortfolioTab-container .inner-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.PortfolioTab-container .inner-container .projectBox {
+    border-radius: .25rem;
+    display: grid;
+    gap: 10px;
+}
+.PortfolioTab-container .inner-container .projectBox .img-container{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: .25rem;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: .5rem;
+}
+.PortfolioTab-container .inner-container .projectBox .blank{
+    width: 100%;
+    height: 200px;
+    background-color: #fff;
+    border-radius: .25rem;
+}
+
+.PortfolioTab-container .inner-container .projectBox .title{
+    color: var(--text-primary);
+}
+.PortfolioTab-container .inner-container .projectBox .button-container button{
+    background-color: #fff;
+    color: var(--orange-500);
+    border-radius: 50px;
+    padding: 5px 20px;
+    font-size: .9rem;
+    font-weight: 500;
+    position: relative;
+}
+.PortfolioTab-container .inner-container .projectBox .button-container button::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--orange-500);
+    border-radius: 50px;
+    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    height: 100%;
+}
+
+.PortfolioTab-container .inner-container .projectBox .button-container button:hover::after{
+    width: 100%;
+}

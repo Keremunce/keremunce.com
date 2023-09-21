@@ -1,0 +1,138 @@
+.HomeTab-container {
+    max-width: 90%;
+    height: 100%;
+    margin: auto;
+    display: grid;
+    position: relative;
+    z-index: 5;
+}
+.HomeTab-container .contact-container{
+    display: inline-flex;
+    height: fit-content;
+    gap: 1rem;
+    padding-top: 2rem;
+    justify-content: right;
+    align-items: center;
+}
+.HomeTab-container .contact-container a{
+    color: var(--text-secondary);
+    font-size: .9rem;
+}
+.HomeTab-container .contact-container i{
+    color: var(--orange-600);
+}
+.HomeTab-container .inner-container {
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+.HomeTab-container .inner-container .textContent .helloText {
+    color: var(--text-secondary);
+}
+
+.HomeTab-container .inner-container .textContent .helloText span {
+    font-size: 1.5rem;
+}
+
+.HomeTab-container .inner-container .textContent .title {
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin: 1rem 0 1.5rem 0;
+}
+
+.HomeTab-container .inner-container .textContent .desc {
+    color: var(--text-secondary);
+    line-height: 30px;
+    margin-bottom: 1.5rem;
+}
+
+.HomeTab-container .inner-container .textContent .buttons-wrapper {
+    display: flex;
+    gap: 1rem;
+}
+
+.HomeTab-container .inner-container .textContent .buttons-wrapper a {
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --borderWidth: 2px;
+}
+
+.HomeTab-container .inner-container .textContent .buttons-wrapper a:active {
+    transform: scale(0.95);
+}
+
+.HomeTab-container .inner-container .textContent .buttons-wrapper a.hl {
+    background-color: #fff;
+}
+.HomeTab-container .inner-container .textContent .buttons-wrapper a.hl::before {
+    content: '';
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transition: opacity 500ms, visibility 500ms;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, var(--orange-600), var(--orange-500), var(--orange-400), var(--orange-300), var(--orange-400), var(--orange-500), var(--orange-600));
+    border-radius: calc(8.5 * var(--borderWidth));
+    z-index: -1;
+    background-size: 300% 300%;
+}
+.HomeTab-container .inner-container .textContent .buttons-wrapper a.hl:hover::before {
+    animation: slideAndSpin 5s ease infinite;
+    opacity: 1;
+    visibility: visible;
+}
+@keyframes slideAndSpin {
+    0% {
+        background-position: bottom left;
+    }
+    25% {
+        background-position: bottom right;
+    }
+    50% {
+        background-position: top right;
+    }
+    75% {
+        background-position: top left;
+    }
+    100% {
+        background-position: bottom left;
+    }
+}
+
+
+.HomeTab-container .inner-container .textContent .buttons-wrapper a i {
+    margin-left: .15rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.HomeTab-container .inner-container .textContent .buttons-wrapper a:hover i {
+    margin-left: .35rem;
+}
+
+.HomeTab-container .inner-container .image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 0 2px #fff;
+}
+.HomeTab-container .inner-container .image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

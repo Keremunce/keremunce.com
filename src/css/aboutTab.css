@@ -1,0 +1,113 @@
+.AboutTab-container {
+    position: relative;
+    padding: 1rem;
+}
+
+.AboutTab-container .whoamI {
+    display: inline-flex;
+}
+
+.AboutTab-container .inner-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.AboutTab-container .inner-container .image-container {
+    grid-column: span 1;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.AboutTab-container .inner-container .image-container img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.AboutTab-container .inner-container .content-container {
+    grid-column: 2 / 4;
+    display: grid;
+    gap: 1rem;
+}
+
+.AboutTab-container .inner-container .content-container .card {
+    background-color: rgba(255, 255, 255, .6);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.AboutTab-container .inner-container .content-container .card.bio .title {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+.AboutTab-container .inner-container .content-container .card.bio .desc {
+    color: var(--text-secondary);
+}
+
+.AboutTab-container .inner-container .content-container .card.info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.AboutTab-container .inner-container .content-container .card.info > div {
+    flex: 1 1 50%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.AboutTab-container .inner-container .content-container .card.info > div > p:last-child {
+    color: var(--text-secondary);
+}
+
+.AboutTab-container .inner-container .downloadCV-container {
+    position: relative;
+    width: fit-content;
+}
+
+.AboutTab-container .inner-container .downloadCV-container button {
+    background-color: #FFD9C9;
+    color: #FF6525;
+    border-radius: .5rem;
+    padding: 16px 50px 16px 28px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transform: perspective(1px) translateZ(0);
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all .3s ease-in-out;
+}
+.AboutTab-container .inner-container .downloadCV-container button.loading{
+    opacity: .7;
+    cursor: progress;
+}
+.AboutTab-container .inner-container .downloadCV-container button .top-icon{
+    position: absolute;
+    top: -40%;
+    left: 80%;
+    transition: all .3s ease-in-out;
+}
+.AboutTab-container .inner-container .downloadCV-container button .bottom-icon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 80%;
+    transition: all .3s ease-in-out;
+}
+.AboutTab-container .inner-container .downloadCV-container button:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.AboutTab-container .inner-container .downloadCV-container button:hover  .top-icon{
+    top: 50%;
+    transform: translateY(-50%);
+}
+.AboutTab-container .inner-container .downloadCV-container button:hover  .bottom-icon{
+    top: 120%;
+}
